@@ -1,7 +1,8 @@
-# geerlingguy's dotfiles
+# jaime's dotfiles
 
-My configuration. Minimalist, but helps save a few thousand keystrokes a day. I use Mac OS X, so I can only guarantee they'll work with OS X, but I use some of these dotfiles on various linux servers, and they seem to be pretty flexible.
+My configuration, based on geerlingguy dotfiles. Aslo Minimalist, but helps save a few thousand keystrokes a day. I'm using them for Mac OS X, i'll try to update for use with Cygwin and Linux in the future to be be pretty flexible.
 
 ## License
 
 MIT / BSD
+ 
