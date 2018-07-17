@@ -1,7 +1,7 @@
 syntax on               " enable syntax highlighting
 set cursorline          " highlight the current line
-" set background=dark   " darker color scheme
-" set ruler             " show line number in bar
+"set background=dark   " darker color scheme
+set ruler             " show line number in bar
 set nobackup            " don't create pointless backup files; Use VCS instead
 set autoread            " watch for file changes
 set number              " show line numbers
@@ -33,6 +33,7 @@ set visualbell          " but leave on a visual bell
 
 " search
 set hlsearch            " highlighted search results
+set incsearch 		" Highlight dynamically as pattern is typed
 set showmatch           " show matching bracket
 
 " other

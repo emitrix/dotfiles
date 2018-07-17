@@ -1,8 +1,8 @@
 [user]
-  name = Jeff Geerling
-  email = geerlingguy@mac.com
+  name = Jaime Gaona
+  email = jaimegaona@gmail.com
 [core]
-  editor = vi
+  editor = vim
   excludesfile = ~/.gitignore
   autocrlf = input
 [color]
@@ -19,7 +19,7 @@
 [merge]
   tool = kdiff3
 [difftool]
-  prompt = false
+  prompt = true
 [alias]
   c = commit
   ca = commit -a
