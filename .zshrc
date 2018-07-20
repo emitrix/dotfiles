@@ -61,7 +61,6 @@ ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" "avit" )
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  osx
   dotenv
   colored-man
   colorize
@@ -110,9 +109,9 @@ source $ZSH/oh-my-zsh.sh
 #
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export JAVA_HOME=`/usr/libexec/java_home`  
+export JAVA_HOME=`/usr/libexec/java_home`
 
-for file in ~/.{aliases,functions}; do 
+for file in ~/.{aliases,functions}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file
