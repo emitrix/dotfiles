@@ -61,6 +61,8 @@ ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" "avit" )
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  git-extras
+  osx
   dotenv
   colored-man
   colorize
@@ -74,6 +76,7 @@ plugins=(
   kubectl
   aws
   zsh-autosuggestions
+  tmux
 )
 
 source $ZSH/oh-my-zsh.sh
