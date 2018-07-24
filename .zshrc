@@ -7,15 +7,16 @@ export ZSH=/Users/jgaona/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="random"
+#ZSH_THEME="spaceship"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="random"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
 # looking in ~/.oh-my-zsh/themes/
 # An empty array have no effect
-ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" "avit" )
+ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" "avit")
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -99,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -112,9 +113,12 @@ source $ZSH/oh-my-zsh.sh
 #
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export JAVA_HOME=`/usr/libexec/java_home`
+export JAVA_HOME=`/usr/libexec/java_home`  
 
-for file in ~/.{aliases,functions}; do
+for file in ~/.{aliases,functions}; do 
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 unset file
+

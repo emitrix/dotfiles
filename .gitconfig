@@ -17,10 +17,11 @@
 [push]
   default = simple
 [merge]
-  tool = kdiff3
+  tool = vimdiff
 [difftool]
   prompt = true
 [alias]
+  aA = add -A
   c = commit
   ca = commit -a
   cm = commit -m
@@ -28,3 +29,4 @@
   d = diff
   dc = diff --cached
   l = log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
