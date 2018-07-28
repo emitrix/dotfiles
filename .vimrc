@@ -14,21 +14,29 @@ Plugin 'gmarik/Vundle.vim'
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
 
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-scripts/indentpython.vim'
-Bundle 'Valloric/YouCompleteMe'
-Plugin 'vim-syntastic/syntastic'
 
-"File browsing plugins
+
+
+"UI 
 Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-"Git integration
-Plugin 'tpope/vim-fugitive'
-" status bar
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'itchyny/lightline'      "elegant statusline
 
-" Presentations
-Plug 'junegunn/goyo.vim'
+
+"Git 
+Plugin 'airblade/vim-gitgutter' " Show git diffs in a sidebar
+Plugin 'tpope/vim-fugitive'     " Git wrapper
+Plugin 'tpope/vim-rhubarb'      " Hub extension
+
+" Syntax
+Plugin 'sheerun/vim-polyglot'                             " A lot of languages
+Plugin 'plasticboy/vim-markdown', { 'for': ['markdown'] } " Markdown
+"Plugin 'w0rp/ale'
+
+"Utils
+Plugin 'tpope/vim-surround'     " Surround text with characters
+Plugin 'tpope/vim-eunuch'       " Unix file operations
+Plugin 'mattn/emmet-vim'        " Zen Coding HTML + CSS
+Plugin 'tmhedberg/SimpylFold'   " Fold code for visibilty
 
 
 " All of your Plugins must be added before the following line
@@ -81,9 +89,6 @@ set guioptions=aAace    " don't show scrollbar in MacVim
 " clipboard
 set clipboard=unnamed   " allow yy, etc. to interact with OS X clipboard
 
-" shortcuts
-map <F2> :NERDTreeToggle<CR>
-
 " remapped keys
 inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
@@ -96,11 +101,24 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+
+" Nerd tree remap to F2
+map <F2> :NERDTreeToggle<CR>
+
+
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za
+
+" status bar config
+let g:lightline = {
+  \     'active': {
+  \         'left': [['mode', 'paste' ], ['readonly', 'filename', 'modified']],
+  \         'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding']]
+  \     }
+  \ }
 
 " Some Programming indentation 
 "au BufNewFile,BufRead *.py
@@ -123,8 +141,8 @@ nnoremap <space> za
 set encoding=utf-8
 
 "Auto-complete customizations:
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"let g:ycm_autoclose_preview_window_after_completion=1
+"map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 "python with virtualenv support
 py << EOF
@@ -137,6 +155,5 @@ if 'VIRTUAL_ENV' in os.environ:
 EOF
 
 " make your code look pretty 
-let python_highlight_all=1
-
+"let python_highlight_all=1
 au BufNewFile,BufRead Jenkinsfile setf groovy
