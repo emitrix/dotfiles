@@ -27,6 +27,9 @@ Plugin 'tpope/vim-fugitive'
 " status bar
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
+" Presentations
+Plug 'junegunn/goyo.vim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -136,3 +139,4 @@ EOF
 " make your code look pretty 
 let python_highlight_all=1
 
+au BufNewFile,BufRead Jenkinsfile setf groovy
