@@ -15,12 +15,9 @@ Plugin 'gmarik/Vundle.vim'
 " used Bundle instead of Plugin)
 
 
-
-
 "UI 
 Plugin 'scrooloose/nerdtree'
-Plugin 'itchyny/lightline'      "elegant statusline
-
+Plugin 'itchyny/lightline.vim'      "elegant statusline
 
 "Git 
 Plugin 'airblade/vim-gitgutter' " Show git diffs in a sidebar
@@ -30,7 +27,10 @@ Plugin 'tpope/vim-rhubarb'      " Hub extension
 " Syntax
 Plugin 'sheerun/vim-polyglot'                             " A lot of languages
 Plugin 'plasticboy/vim-markdown', { 'for': ['markdown'] } " Markdown
-"Plugin 'w0rp/ale'
+"Plugin 'w0rp/ale'              " ALE- code analysis
+"Plugin 'vim-scripts/indentpython.vim'
+"Bundle 'Valloric/YouCompleteMe'
+"Plugin 'vim-syntastic/syntastic'
 
 "Utils
 Plugin 'tpope/vim-surround'     " Surround text with characters
